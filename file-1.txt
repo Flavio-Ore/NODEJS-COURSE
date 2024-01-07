@@ -1,0 +1,2 @@
+Fun fact about php:
+Elephants can’t jump.
