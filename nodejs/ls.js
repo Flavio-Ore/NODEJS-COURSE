@@ -1,5 +1,6 @@
 const fs = require('node:fs/promises')
 const path = require('node:path')
+const pc = require('picocolors')
 
 async function ls (folder = '') {
   let files
@@ -44,12 +45,12 @@ async function ls (folder = '') {
   console.log(`        ${directory}\n`)
 
   // https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color
-  console.log('\x1b[32m') //FgGreen
+  console.log('\x1b[32m') // FgGreen
 
   console.log('Type   Date        Time                Size   Name')
   console.log(
     '----  ----------   --------  --------------  ----------',
-    '\x1b[0m' //Reset console color (default)
+    '\x1b[0m' // Reset console color (default)
   )
 
   filesInfo.forEach(fileInfo => console.log(fileInfo))

@@ -1,0 +1,14 @@
+### Get pokemon
+GET http://localhost:3001/pokemon/ditto
+
+### To create pokemon
+POST  http://localhost:3001/pokemon
+Content-Type: application/json
+
+{
+  "name": "ditto",
+  "type": "normal",
+  "moves": [
+    "transform"
+  ]
+}

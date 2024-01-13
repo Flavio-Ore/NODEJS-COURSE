@@ -1,0 +1,30 @@
+{
+  "name": "nodejs-midu-course",
+  "version": "1.0.0",
+  "description": "Node Js course by Midudev",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "http",
+    "express"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:http": "nodemon http/index.js",
+    "dev:express": "nodemon express/index.js"
+  },
+  "keywords": [ ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "3.0.2",
+    "standard": "17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  },
+  "dependencies": {
+    "express": "4.18.2",
+    "picocolors": "^1.0.0"
+  }
+}
