@@ -10,6 +10,7 @@ app.disable('x-powered-by') // Disable x-powered-by header
 
 // app.use(express.json()) : express.json() is a middleware that parses incoming requests with JSON payloads and is based on body-parser.
 
+// The following code is a custom implementation of express.json() middleware
 app.use((req, res, next) => {
   if (
     req.method !== 'POST' ||
