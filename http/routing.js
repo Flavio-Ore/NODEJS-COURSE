@@ -1,4 +1,4 @@
-const dittoJSON = require('./api.json')
+const dittoJSON = require('./../json/poke.api.json')
 
 const processRequest = (req, res) => {
   const { method, url } = req

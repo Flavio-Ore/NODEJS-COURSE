@@ -1,6 +1,6 @@
 // Migration from http dir to express dir using express framework
 const express = require('express')
-const ditto = require('./../http/api.json')
+const ditto = require('./../json/poke.api.json')
 
 const PORT = process.env.PORT ?? 3001
 

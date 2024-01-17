@@ -5,7 +5,7 @@ const {
 } = require('./movie.schema.js')
 const crypto = require('node:crypto')
 // const cors = require('cors')
-const movies = require('./movies.json')
+const movies = require('./../json/movie.api.json')
 
 const app = express()
 const PORT = process.env.PORT ?? 3001
@@ -19,7 +19,7 @@ const ALLOWED_ORIGINS = [
 // We change it to allow only the origins in the ALLOWED_ORIGINS array
 /*
   app.use(cors({
-    origin: (origin, callback) {
+    origin: (origin, callback) => {
       const ALLOWED_ORIGINS = [...]
       if (ALLOWED_ORIGINS.includes(origin)) {
         return callback(null, true)
@@ -74,6 +74,13 @@ app.get('/movies/:id', (req, res) => {
 app.post('/movies', (req, res) => {
   const validationResults = validateMovieSchema(req.body)
 
+  if (validationResults.error) {
+    // 422: Unprocessable Entity
+    return res
+      .status(422)
+      .json({ error: JSON.parse(validationResults.error.message) })
+  }
+
   const movieAlreadyExists = movies.some(
     movie =>
       movie.title === validationResults.data.title &&
@@ -88,13 +95,6 @@ app.post('/movies', (req, res) => {
 
   if (movieAlreadyExists) {
     return res.status(409).json({ message: 'Movie already exists' })
-  }
-
-  if (validationResults.error) {
-    // 422: Unprocessable Entity
-    return res
-      .status(422)
-      .json({ error: JSON.parse(validationResults.error.message) })
   }
 
   const newMovie = {
