@@ -12,7 +12,7 @@ function getAvailablePort (portToTry) {
       })
     })
     netServer.on('error', err => {
-      if (err.code === 'EADDRINUSE')
+      if (err.code === 'EADDRINUSE') {
         getAvailablePort(0).then(port => {
           console.log(
             pc.yellow(
@@ -23,7 +23,7 @@ function getAvailablePort (portToTry) {
           )
           resolve(port)
         })
-      else reject(err)
+      } else reject(err)
     })
   })
 }

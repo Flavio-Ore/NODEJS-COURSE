@@ -24,7 +24,7 @@ Content-Type: application/json
 }
 
 ### Update a movie (the posted one)
-PATCH http://localhost:3001/api/movies/823bc3ba-e4f5-4d30-a362-3aaa73c8b03f
+PATCH http://localhost:3001/api/movies/b4d362e9-4ccb-4135-bb0a-1a533e92305a
 Content-Type: application/json
 
 {
@@ -32,4 +32,4 @@ Content-Type: application/json
 }
 
 ### Delete a movie (the posted one)
-DELETE http://localhost:3001/api/movies/823bc3ba-e4f5-4d30-a362-3aaa73c8b03f
+DELETE http://localhost:3001/api/movies/b4d362e9-4ccb-4135-bb0a-1a533e92305a
