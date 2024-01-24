@@ -2,7 +2,7 @@
 GET http://localhost:3001/api/movies
 
 ### Get a movie by id (first movie)
-GET http://localhost:3001/api/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+GET http://localhost:3001/api/movies/4aa002ed-bb13-11ee-92db-5065f33370da
 
 ### Get all the movies by genre
 GET http://localhost:3001/api/movies?genre=drama
@@ -24,12 +24,12 @@ Content-Type: application/json
 }
 
 ### Update a movie (the posted one)
-PATCH http://localhost:3001/api/movies/b4d362e9-4ccb-4135-bb0a-1a533e92305a
+PATCH http://localhost:3001/api/movies/4aa002ed-bb13-11ee-92db-5065f33370da
 Content-Type: application/json
 
 {
-  "year": 1972
+  "year": 1998
 }
 
 ### Delete a movie (the posted one)
-DELETE http://localhost:3001/api/movies/b4d362e9-4ccb-4135-bb0a-1a533e92305a
+DELETE http://localhost:3001/api/movies/65867e2b-bb13-11ee-92db-5065f33370da

@@ -13,7 +13,8 @@
     "dev:http": "nodemon http/index.js",
     "dev:express": "nodemon express/index.js",
     "dev:api": "nodemon api/index.js",
-    "dev:mvc": "nodemon mvc/index.js"
+    "dev:mvc": "nodemon mvc/index.js",
+    "dev:mysql": "nodemon SQL/server.js"
   },
   "keywords": [ ],
   "author": "",
